@@ -1,0 +1,44 @@
+#include <fstream>
+#include "wisdom.h"
+using namespace std;
+namespace collection_of_wisdom {
+	// Сигнатуры требуемых внешних функций
+	void In(aphorism &a, ifstream &ifst);
+	void In(proverb &p, ifstream &ifst);
+	void Out(aphorism &a, ofstream &ofst);
+	void Out(proverb &p, ofstream &ofst);
+	// Ввод параметров обобщенной мудрости из файла
+	wisdom* In(ifstream &ifst)
+	{
+		wisdom *sp;
+		int k;
+		ifst >> k;
+		switch (k) {
+		case 1:
+			sp = new wisdom;
+			sp->k = wisdom::key::APHORISM;
+			In(sp->a, ifst);
+			return sp;
+		case 2:
+			sp = new wisdom;
+			sp->k = wisdom::key::PROVERB;
+			In(sp->p, ifst);
+			return sp;
+		default:
+			return 0;
+		}
+	};
+	// Вывод параметров текущей мудрости в поток
+	void Out(wisdom &s, ofstream &ofst) {
+		switch (s.k) {
+		case wisdom::key::APHORISM:
+			Out(s.a, ofst);
+			break;
+		case wisdom::key::PROVERB:
+			Out(s.p, ofst);
+			break;
+		default:
+			ofst << "Incorrect wisdom!" << endl;
+		}
+	};
+} // end collection_of_wisdom namespace
