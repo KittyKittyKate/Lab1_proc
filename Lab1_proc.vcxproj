@@ -127,12 +127,14 @@
     <ClCompile Include="container_constr.cpp" />
     <ClCompile Include="container_IN_OUT.cpp" />
     <ClCompile Include="Lab_1_proc.cpp" />
+    <ClCompile Include="new_class.cpp" />
     <ClCompile Include="proverb_IN_OUT.cpp" />
     <ClCompile Include="wisdom_IN_OUT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aphorism.h" />
     <ClInclude Include="container.h" />
+    <ClInclude Include="new_class.h" />
     <ClInclude Include="proverb.h" />
     <ClInclude Include="wisdom.h" />
   </ItemGroup>
