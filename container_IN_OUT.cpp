@@ -19,4 +19,15 @@ namespace collection_of_wisdom {
 			Out(*(c.cont[i]), ofst);
 		}
 	};
+	void OutAphorism(container &c, ofstream &ofst) {
+		ofst << "Only aphorisms." << endl;
+		for (int i = 0; i < c.lenght; i++) {
+			if (c.cont[i]->k == wisdom::APHORISM) {
+				ofst << i << ": ";
+				Out(*(c.cont[i]), ofst);
+			}
+			/*else
+				ofst << endl;*/
+		}
+	};
 } // end collection_of_wisdom namespace
