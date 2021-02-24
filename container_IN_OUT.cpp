@@ -22,4 +22,17 @@ namespace collection_of_wisdom {
 				<< Count_Comma(*(c.cont[i])) << endl;
 		}
 	};
+	bool Compare(wisdom *first, wisdom *second);
+	// Сортировка содержимого контейнера
+	void Sort(container &c) {
+		for (int i = 0; i < c.lenght - 1; i++) {
+			for (int j = i + 1; j < c.lenght; j++) {
+				if (Compare(c.cont[i], c.cont[j])) {
+					wisdom *tmp = c.cont[i];
+					c.cont[i] = c.cont[j];
+					c.cont[j] = tmp;
+				}
+			}
+		}
+	};
 } // end collection_of_wisdom namespace

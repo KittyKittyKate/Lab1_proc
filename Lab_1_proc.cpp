@@ -8,6 +8,7 @@ namespace collection_of_wisdom {
 	void Clear(container &c);
 	void In(container &c, ifstream &ifst);
 	void Out(container &c, ofstream &ofst);
+	void Sort(container &c);
 }
 using namespace collection_of_wisdom;
 
@@ -25,6 +26,7 @@ int main(int argc, char* argv[]) {
 	Init(c);
 	In(c, ifst);
 	ofst << "Filled container." << endl;
+	Sort(c);
 	Out(c, ofst);
 	Clear(c);
 	ofst << "Empty container." << endl;

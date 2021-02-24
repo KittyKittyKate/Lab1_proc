@@ -53,5 +53,7 @@ namespace collection_of_wisdom {
 			return -1;
 		}
 	};
-	
+		bool Compare(wisdom *first, wisdom *second) {
+		return Count_Comma(*first) > Count_Comma(*second);
+	};
 } // end collection_of_wisdom namespace
