@@ -13,4 +13,16 @@ namespace collection_of_wisdom {
 	{
 		ofst << "'" << p.proverb << "' - " << p.country << endl;
 	};
+	int Comma_Count(proverb &p) {
+		int comma = 0;
+		int i = 0;
+		while (p.proverb[i] != '\0')
+		{
+			if (p.proverb[i] == ',') {
+				comma++;
+			}
+			i++;
+		}
+		return comma;
+	};
 } // end collection_of_wisdom namespace

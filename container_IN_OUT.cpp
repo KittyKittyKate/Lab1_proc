@@ -4,6 +4,7 @@ using namespace std;
 namespace collection_of_wisdom {
 	// —игнатуры требуемых внешних функций
 	wisdom *In(ifstream &ifst);// ¬вод содержимого контейнера из указанного потока
+	int Count_Comma(wisdom &s);
 	void In(container &c, ifstream &ifst) {
 		while (!ifst.eof()) {
 			if ((c.cont[c.lenght] = In(ifst)) != 0){ c.lenght++; }
@@ -17,6 +18,8 @@ namespace collection_of_wisdom {
 		for (int i = 0; i < c.lenght; i++) {
 			ofst << i << ": ";
 			Out(*(c.cont[i]), ofst);
+			ofst << "Count of comma = "
+				<< Count_Comma(*(c.cont[i])) << endl;
 		}
 	};
 } // end collection_of_wisdom namespace

@@ -11,4 +11,16 @@ namespace collection_of_wisdom {
 	void Out(aphorism &a, ofstream &ofst) {
 		ofst << "'" << a.aphor << "' - " << a.author << endl;
 	};
+	int Comma_Count(aphorism &a) {
+		int comma = 0;
+		int i = 0;
+		while (a.aphor[i] != '\0')
+		{
+			if (a.aphor[i] == ',') {
+				comma++;
+			}
+			i++;
+		}
+		return comma;
+	};
 } // end collection_of_wisdom namespace
