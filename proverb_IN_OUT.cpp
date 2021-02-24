@@ -8,9 +8,10 @@ namespace collection_of_wisdom {
 	{
 		ifst.getline(p.proverb, 50);
 		ifst.getline(p.country, 50);
+		ifst >> p.rate;
 	};
 	void Out(proverb &p, ofstream &ofst)
 	{
-		ofst << "'" << p.proverb << "' - " << p.country << endl;
+		ofst << "'" << p.proverb << "' - " << p.country << ". My rate: " << p.rate << endl;
 	};
 } // end collection_of_wisdom namespace

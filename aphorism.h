@@ -8,6 +8,7 @@ namespace collection_of_wisdom {
 	{		
 		char aphor[50];
 		char author[50];
+		int rate;
 	};
 } // end collection_of_wisdom namespace
 #endif
