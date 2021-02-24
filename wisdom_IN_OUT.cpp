@@ -7,8 +7,8 @@ namespace collection_of_wisdom {
 	void In(proverb &p, ifstream &ifst);
 	void Out(aphorism &a, ofstream &ofst);
 	void Out(proverb &p, ofstream &ofst);
-	int Comma_Count(aphorism &a);
-	int Comma_Count(proverb &p);
+	int Comma_Count_aphor(aphorism &a);
+	int Comma_Count_proverb(proverb &p);
 	// Ввод параметров обобщенной мудрости из файла
 	wisdom* In(ifstream &ifst)
 	{
@@ -46,11 +46,12 @@ namespace collection_of_wisdom {
 	int Count_Comma(wisdom &s) {
 		switch (s.k) {
 		case wisdom::key::APHORISM:
-			return Comma_Count(s.a);
+			return Comma_Count_aphor(s.a);
 		case wisdom::key::PROVERB:
-			return Comma_Count(s.p);
+			return Comma_Count_proverb(s.p);
 		default:
 			return -1;
 		}
 	};
+	
 } // end collection_of_wisdom namespace

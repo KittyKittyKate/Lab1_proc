@@ -13,7 +13,7 @@ namespace collection_of_wisdom {
 	{
 		ofst << "'" << p.proverb << "' - " << p.country << endl;
 	};
-	int Comma_Count(proverb &p) {
+	int Comma_Count_proverb(proverb &p) {
 		int comma = 0;
 		int i = 0;
 		while (p.proverb[i] != '\0')

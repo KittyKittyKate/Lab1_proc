@@ -11,7 +11,7 @@ namespace collection_of_wisdom {
 	void Out(aphorism &a, ofstream &ofst) {
 		ofst << "'" << a.aphor << "' - " << a.author << endl;
 	};
-	int Comma_Count(aphorism &a) {
+	int Comma_Count_aphor(aphorism &a) {
 		int comma = 0;
 		int i = 0;
 		while (a.aphor[i] != '\0')
