@@ -18,11 +18,13 @@ namespace collection_of_wisdom {
 			sp = new wisdom;
 			sp->k = wisdom::key::APHORISM;
 			In(sp->a, ifst);
+			ifst >> sp->rate;
 			return sp;
 		case 2:
 			sp = new wisdom;
 			sp->k = wisdom::key::PROVERB;
 			In(sp->p, ifst);
+			ifst >> sp->rate;
 			return sp;
 		default:
 			return 0;
@@ -33,9 +35,11 @@ namespace collection_of_wisdom {
 		switch (s.k) {
 		case wisdom::key::APHORISM:
 			Out(s.a, ofst);
+			ofst << ". My rate: " << s.rate << endl;
 			break;
 		case wisdom::key::PROVERB:
 			Out(s.p, ofst);
+			ofst << ". My rate: " << s.rate << endl;
 			break;
 		default:
 			ofst << "Incorrect wisdom!" << endl;

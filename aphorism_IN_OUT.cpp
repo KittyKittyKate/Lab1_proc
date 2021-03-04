@@ -7,9 +7,9 @@ namespace collection_of_wisdom {
 	void In(aphorism &a, ifstream &ifst) {
 		ifst.getline(a.aphor, 50);
 		ifst.getline(a.author, 50);
-		ifst >> a.rate;
+		
 	};
 	void Out(aphorism &a, ofstream &ofst) {
-		ofst << "'" << a.aphor << "' - " << a.author << ". My rate: " << a.rate << endl;
+		ofst << "'" << a.aphor << "' - " << a.author;
 	};
 } // end collection_of_wisdom namespace
