@@ -11,7 +11,7 @@ namespace collection_of_wisdom {
 		// значения ключей для каждой мудрости
 		enum key { APHORISM, PROVERB, PUZZLE };
 		key k; // ключ
-		char expression[50];
+		char expression[100];
 		int rate;
 		// используемые альтернативы
 		union { // используем включение
