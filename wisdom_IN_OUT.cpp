@@ -11,6 +11,7 @@ namespace collection_of_wisdom {
 	void Out(puzzle &a, ofstream &ofst);
 	int Comma_Count_aphor(aphorism &a);
 	int Comma_Count_proverb(proverb &p);
+	int Comma_Count_puzzle(puzzle &z);
 	// Ввод параметров обобщенной мудрости из файла
 	wisdom* In(ifstream &ifst)
 	{
@@ -59,6 +60,8 @@ namespace collection_of_wisdom {
 			return Comma_Count_aphor(s.a);
 		case wisdom::key::PROVERB:
 			return Comma_Count_proverb(s.p);
+		case wisdom::key::PUZZLE:
+			return Comma_Count_puzzle(s.z);
 		default:
 			return -1;
 		}

@@ -18,7 +18,7 @@ namespace collection_of_wisdom {
 		for (int i = 0; i < c.lenght; i++) {
 			ofst << i << ": ";
 			Out(*(c.cont[i]), ofst);
-			ofst << "Count of comma = "
+			ofst << "Count of comma: "
 				<< Count_Comma(*(c.cont[i])) << endl;
 		}
 	};
