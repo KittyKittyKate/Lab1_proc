@@ -22,12 +22,16 @@ namespace collection_of_wisdom {
 		case 1:
 			sp = new wisdom;
 			sp->k = wisdom::key::APHORISM;
+			ifst.getline(sp->expression, 50);
 			In(sp->a, ifst);
+			ifst >> sp->rate;
 			return sp;
 		case 2:
 			sp = new wisdom;
 			sp->k = wisdom::key::PROVERB;
+			ifst.getline(sp->expression, 50);
 			In(sp->p, ifst);
+			ifst >> sp->rate;
 			return sp;
 		case 3:
 			sp = new wisdom;
@@ -40,6 +44,7 @@ namespace collection_of_wisdom {
 	};
 	// ¬ывод параметров текущей мудрости в поток
 	void Out(wisdom &s, ofstream &ofst) {
+		ofst << "'" << s.expression;
 		switch (s.k) {
 		case wisdom::key::APHORISM:
 			Out(s.a, ofst);
@@ -53,6 +58,7 @@ namespace collection_of_wisdom {
 		default:
 			ofst << "Incorrect wisdom!" << endl;
 		}
+		ofst << ". My rate: " << s.rate << endl;
 	};
 	int Count_Comma(wisdom &s) {
 		switch (s.k) {
