@@ -40,6 +40,7 @@ namespace collection_of_wisdom {
 			if (c.cont[i]->k == wisdom::APHORISM) {
 				ofst << i << ": ";
 				Out(*(c.cont[i]), ofst);
+				ofst << "Count of comma: " << Count_Comma(*(c.cont[i])) << endl;
 			}
 			/*else
 				ofst << endl;*/

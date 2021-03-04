@@ -27,12 +27,17 @@ int main(int argc, char* argv[]) {
 	Init(c);
 	In(c, ifst);
 	ofst << "Filled container." << endl;
-	OutAphorism(c, ofst);
-	Sort(c);
-	Out(c, ofst);
+
+	OutAphorism(c, ofst); //вывод только афоризмов
+
+	//Out(c, ofst);//обычный вывод контейнера
+
+	//Sort(c); // cортировка
+	//Out(c, ofst); // вывод отсортированного контейнера
+
 	Clear(c);
 	ofst << "Empty container." << endl;
-	Out(c, ofst);
+	//Out(c, ofst);
 	cout << "Goodbye" << endl;
 	return 0;
 }
