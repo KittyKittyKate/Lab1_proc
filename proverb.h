@@ -5,7 +5,7 @@
 namespace collection_of_wisdom {
 	// пословица
 	struct proverb {
-		char proverb[50];
+		//char proverb[50];
 		char country[50];
 		
 	};
