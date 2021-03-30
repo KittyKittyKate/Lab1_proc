@@ -1,7 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include "container.h"
+
 using namespace std;
+
 namespace collection_of_wisdom {
 	// Сигнатуры требуемых внешних функций
 	void Init(container &c);
@@ -10,6 +12,7 @@ namespace collection_of_wisdom {
 	void Out(container &c, ofstream &ofst);
 	void OutAphorism(container &c, ofstream &ofst);
 	void Sort(container &c);
+	void MultiMethod(container &c, ofstream &ofst);
 }
 using namespace collection_of_wisdom;
 
@@ -27,17 +30,16 @@ int main(int argc, char* argv[]) {
 	Init(c);
 	In(c, ifst);
 	ofst << "Filled container." << endl;
-
-	OutAphorism(c, ofst); //вывод только афоризмов
-
+	MultiMethod(c, ofst);
 	//Out(c, ofst);//обычный вывод контейнера
-
+	//ofst << "\n\nSorted container." << endl;
 	//Sort(c); // cортировка
-	//Out(c, ofst); // вывод отсортированного контейнера
+	//Out(c, ofst);//вывод контейнера отсортированного
+	//ofst << "\n\nAphorism container." << endl;
+	//OutAphorism(c, ofst); //вывод только афоризмов
 
 	Clear(c);
 	ofst << "Empty container." << endl;
-	//Out(c, ofst);
 	cout << "Goodbye" << endl;
 	return 0;
 }
