@@ -3,19 +3,13 @@ Multimethod.
 APHORISM and PROVERB.
 'It never rains,, but it pours' - R.Rollan. My rate: 4
 'Under a stone mat lies, still no water flows' - Russian. My rate: 5
-Triangle and Triangle.
-'Under a stone mat lies, still no water flows' - Russian. My rate: 5
+APHORISM and APHORISM.
+'It never rains,, but it pours' - R.Rollan. My rate: 4
+'It never rains,, but it pours' - R.Rollan. My rate: 4
+PROVERB and PROVERB.
 'Fine words,, butter no parsnips' - Russian. My rate: 9
-Unknown type
-'Fine words,, butter no parsnips' - Russian. My rate: 9
-'What has a face and two hands, but no arms or legs?' Answer: Ñlock. My rate: 2
-Unknown type
-'What has a face and two hands, but no arms or legs?' Answer: Ñlock. My rate: 2
-'ABC' - DEF. My rate: 5
-APHORISM and PROVERB.
-'ABC' - DEF. My rate: 5
 'GHI' - Australia. My rate: 3
-Unknown type
+PROVERB and APHORISM.
 'GHI' - Australia. My rate: 3
-'KLM' Answer: NOP. My rate: 4
+'ABC' - DEF. My rate: 5
 Empty container.

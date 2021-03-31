@@ -10,7 +10,7 @@ namespace collection_of_wisdom {
 	// Ìףכüעטלועמה
 	void MultiMethod(container &c, ofstream &ofst) {
 		ofst << "Multimethod." << endl;
-			for (int i = 0; i < c.lenght - 1; i++) {
+			for (int i = 0; i < c.lenght - 1; i += 2) {
 				for (int j = i + 1; j < c.lenght; j++) {
 					switch (c.cont[i]->k) {
 					case wisdom::APHORISM:
@@ -22,7 +22,7 @@ namespace collection_of_wisdom {
 							ofst << "APHORISM and PROVERB." << endl;
 							break;
 						default:
-							ofst << "Unknown type" << endl;
+							ofst << "APHORISM and Unknown type" << endl;
 						}
 						break;
 					case wisdom::PROVERB:
@@ -34,7 +34,7 @@ namespace collection_of_wisdom {
 							ofst << "PROVERB and PROVERB." << endl;
 							break;
 						default:
-							ofst << "Unknown type" << endl;
+							ofst << "PROVERB and Unknown type" << endl;
 						}
 						break;
 					default:
